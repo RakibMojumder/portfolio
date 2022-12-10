@@ -48,7 +48,7 @@ const Header = () => {
       </div>
       <div className="mt-10 md:mt-0">
         <h3 className="text-white">Hi !, I am</h3>
-        <h1 className="text-5xl uppercase font-robotoMono font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">
+        <h1 className="text-5xl uppercase font-robotoMono font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-400">
           Rakib Ahmed
         </h1>
         <h1 className="text-xl text-white uppercase mt-4 md:[word-spacing:5px]">

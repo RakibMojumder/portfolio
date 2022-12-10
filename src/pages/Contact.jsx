@@ -58,13 +58,25 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex text-3xl space-x-9">
-            <a href="https://www.facebook.com/profile.php?id=100078261521721">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.facebook.com/profile.php?id=100078261521721"
+            >
               <BsFacebook className="hover:text-cyan-400" />
             </a>
-            <a href="https://www.linkedin.com/in/rakib-ahmed4554/">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/rakib-ahmed4554/"
+            >
               <BsLinkedin className="hover:text-cyan-400" />
             </a>
-            <a href="https://github.com/RakibMojumder">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/RakibMojumder"
+            >
               <BsGithub className="hover:text-cyan-400" />
             </a>
           </div>
