@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useRef } from "react";
 import { MdPhoneInTalk, MdEmail, MdLocationOn } from "react-icons/md";
 import { BsLinkedin, BsFacebook, BsGithub } from "react-icons/bs";
+import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_xf7sswz",
+        "template_6bkj777",
+        form.current,
+        "g5MUfhlcd6ziz9wZZ"
+      )
+      .then(
+        (result) => {
+          toast.success("Successfully send the message");
+          console.log(result.text);
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div id="contact" className="py-20">
       <h1 className="text-3xl md:text-4xl text-white uppercase text-center font-bold font-robotoMono">
@@ -44,7 +70,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="md:w-1/2">
-          <form className="space-y-5">
+          <form ref={form} onSubmit={sendEmail} className="space-y-5">
             <div className="input-filed">
               <label htmlFor="name" className="text-white block">
                 Name
@@ -52,8 +78,9 @@ const Contact = () => {
               <input
                 className="w-full py-1.5 pl-3 focus:outline-none"
                 type="text"
-                name="name"
+                name="user_name"
                 id="name"
+                required
               />
             </div>
             <div className="input-filed">
@@ -63,8 +90,9 @@ const Contact = () => {
               <input
                 className="w-full py-1.5 pl-3 focus:outline-none"
                 type="email"
-                name="email"
+                name="user_email"
                 id="email"
+                required
               />
             </div>
             <div className="input-filed">
@@ -76,6 +104,7 @@ const Contact = () => {
                 type="text"
                 name="subject"
                 id="subject"
+                required
               />
             </div>
             <div className="input-filed">
@@ -87,9 +116,13 @@ const Contact = () => {
                 name="message"
                 id=""
                 rows="5"
+                required
               ></textarea>
             </div>
-            <button className="bg-cyan-500 border border-cyan-400 px-6 py-1 text-white transition-all duration-300 ease-in hover:bg-transparent hover:rounded-full">
+            <button
+              type="submit"
+              className="bg-cyan-500 border border-cyan-400 px-6 py-1 text-white transition-all duration-300 ease-in hover:bg-transparent hover:rounded-full"
+            >
               Send Message
             </button>
           </form>

@@ -5,6 +5,9 @@ import router from './Routes/Routes';
 import bgVideo from './assets/video/Abstract - 19725.mp4';
 import { useEffect, useState } from 'react';
 import PropagateLoader from "react-spinners/PropagateLoader";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -36,6 +39,7 @@ function App() {
       <div className='min-h-screen absolute w-full h-full top-0 left-0'>
         <RouterProvider router={router}></RouterProvider>
       </div>
+      <ToastContainer position='top-center' />
     </div>
   );
 }
