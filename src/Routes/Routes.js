@@ -5,6 +5,7 @@ import Skill from "../pages/Skill";
 import Main from '../layout/Main'
 import { createBrowserRouter } from "react-router-dom";
 import Contact from "../pages/Contact";
+import Blogs from "../pages/Blog/Blogs";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
             {
                 path: '/projects',
                 element: <Projects />
+            },
+            {
+                path: '/blog',
+                element: <Blogs />
             },
             {
                 path: '/contact',

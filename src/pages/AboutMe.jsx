@@ -10,10 +10,20 @@ const AboutMe = () => {
         </span>
       </h1>
       <div className="flex flex-col md:flex-row items-center">
-        <div className="w-full md:w-2/5">
+        <div
+          className="w-full md:w-2/5"
+          data-aos="fade-up"
+          data-aos-duration="600"
+          data-aos-easing="linear"
+        >
           <img className="lg:h-[430px] mx-auto" src={myImg} alt="" />
         </div>
-        <div className="flex-1 md:ml-5 font-robotoMono text-white text-center">
+        <div
+          className="flex-1 md:ml-5 font-robotoMono text-white text-center"
+          data-aos="fade-down"
+          data-aos-duration="600"
+          data-aos-easing="linear"
+        >
           <p className="text-justify">
             Hello! I'm Rakib, a self-motivated and enthusiastic web developer. I
             have been learning web development for 1.5 years. I have learned

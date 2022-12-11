@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "aos": "^2.3.4",
     "file-saver": "^2.0.5",
     "lottie-react": "^2.3.1",
     "preline": "^1.5.0",

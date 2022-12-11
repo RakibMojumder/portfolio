@@ -82,11 +82,6 @@ const Header = () => {
           >
             <IoMdDownload className="inline-block" /> Download Resume
           </button>
-          {/* <button className="block md:inline-block bg-cyan-500 border border-cyan-400 px-5 py-1 text-white transition-all duration-300 ease-in hover:bg-transparent hover:rounded-full">
-            <HashLink to="#about" smooth>
-              About Me
-            </HashLink>
-          </button> */}
         </div>
       </div>
     </div>

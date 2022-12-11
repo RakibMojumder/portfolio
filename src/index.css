@@ -32,6 +32,11 @@ code {
 }
 
 
+.swiper-pagination-bullet-active {
+  background-color: rgb(45 212 191) !important;
+}
+
+
 @media screen and (max-width: 500px) {
   #swipper-project {
     width: 390px;

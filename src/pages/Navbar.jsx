@@ -80,6 +80,13 @@ const Navbar = () => {
             </HashLink>
             <HashLink
               className="font-bold md:py-4 relative before:absolute before:bottom-2 md:before:left-0 md:before:bg-cyan-400 md:before:w-0 md:before:h-[2px] md:before:hidden md:hover:before:block md:hover:before:w-full"
+              to="#blog"
+              smooth
+            >
+              Blog
+            </HashLink>
+            <HashLink
+              className="font-bold md:py-4 relative before:absolute before:bottom-2 md:before:left-0 md:before:bg-cyan-400 md:before:w-0 md:before:h-[2px] md:before:hidden md:hover:before:block md:hover:before:w-full"
               to="#contact"
               smooth
             >

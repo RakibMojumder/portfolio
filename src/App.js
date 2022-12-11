@@ -7,10 +7,20 @@ import { useEffect, useState } from 'react';
 import FadeLoader from "react-spinners/FadeLoader";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
+import whatsapp from './assets/img/whatsapp.png';
 
 
 function App() {
   const [loading, setLoading] = useState(true);
+
+  // Init AOS 
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, [])
+
 
   // Fake Loading
   useEffect(() => {
@@ -33,10 +43,12 @@ function App() {
             aria-label="Loading Spinner"
             data-testid="loader" />
         </div> : <div className='min-h-screen absolute w-full h-full top-0 left-0'>
+          <a href='https://wa.me/8801829218489' target="_blank" rel="noreferrer" className='fixed right-20 bottom-20 z-40 text-5xl text-green-400'>
+            <img className='w-16 h-16 rounded-full' src={whatsapp} alt="" />
+          </a>
           <RouterProvider router={router}></RouterProvider>
         </div>
       }
-
       <ToastContainer position='top-center' />
     </div>
   );
